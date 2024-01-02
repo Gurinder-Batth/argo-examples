@@ -32,6 +32,8 @@ spec:
             value: "password"
           - name: MYSQL_DATABASE
             value: "database"
+          - name: MYSQL_ROOT_PASSWORD
+            value: "root"
         resources:
           requests:
             memory: "16Mi" 
