@@ -21,9 +21,17 @@ spec:
         image: "{{ .Values.image_database.name }}:{{ .Values.image_database.tag }}"
         ports:
         - containerPort: 3306
-        envFrom:
-        - configMapRef:
-            name: {{ .Values.configmap.name }}
+        env:
+          - name: MYSQL_HOST
+            value: "mysql-service.default.svc.cluster.local"
+          - name: MYSQL_PORT
+            value: "3306"
+          - name: MYSQL_USER
+            value: "username"
+          - name: MYSQL_PASSWORD
+            value: "password"
+          - name: MYSQL_DATABASE
+            value: "database"
         resources:
           requests:
             memory: "16Mi" 
