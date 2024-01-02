@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.appName }}wordpress
+  labels:
+    app: {{ .Values.appName }}wordpress
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}wordpress
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.appName }}wordpress
+        tier: frontend
+    spec: # Pod spec
+      containers:
+      - name: wordpress-container
+        image: "{{ .Values.image_wordpress.name }}:{{ .Values.image_wordpress.tag }}"
+        ports:
+        - containerPort: 3306
+        envFrom:
+        - configMapRef:
+            name: {{ .Values.configmap.name }}
+        resources:
+          requests:
+            memory: "16Mi" 
+            cpu: "50m"    # 500milliCPUs (1/2 CPU)
+          limits:
+            memory: "128Mi"
+            cpu: "100m"

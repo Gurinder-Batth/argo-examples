@@ -10,8 +10,11 @@ configmap:
 image:
   name: nginx
   tag: latest
-  
 
 image_database:
   name: mysql
+  tag: latest
+
+image_wordpress:
+  name: wordpress
   tag: latest
