@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.appName }}-database
+  name: {{ .Values.appName }}database
   labels:
-    app: {{ .Values.appName }}-database
+    app: {{ .Values.appName }}database
 spec:
   replicas: {{ .Values.replicas }}
   selector:
     matchLabels:
-      app: {{ .Values.appName }}-database
+      app: {{ .Values.appName }}database
       tier: frontend
   template:
     metadata:
       labels:
-        app: {{ .Values.appName }}-database
+        app: {{ .Values.appName }}database
         tier: frontend
     spec: # Pod spec
       containers:
-      - name: database_container
+      - name: database-container
         image: "{{ .Values.image_database.name }}:{{ .Values.image_database.tag }}"
         ports:
         - containerPort: 3306
