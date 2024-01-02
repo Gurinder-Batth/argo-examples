@@ -20,7 +20,7 @@ spec:
       - name: wordpress-container
         image: "{{ .Values.image_wordpress.name }}:{{ .Values.image_wordpress.tag }}"
         ports:
-        - containerPort: 3306
+        - containerPort: 80
         envFrom:
         - configMapRef:
             name: {{ .Values.configmap.name }}
