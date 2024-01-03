@@ -1,5 +1,9 @@
 appName: myhelmapp
 
+ingress:
+  enabled: true
+
+
 port: 80
 
 configmap:
