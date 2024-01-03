@@ -1,4 +1,6 @@
-
+ingress:
+  enabled: true
+  
 replicas: 1
 
 configmap:
