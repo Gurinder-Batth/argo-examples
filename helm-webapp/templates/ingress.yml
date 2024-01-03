@@ -12,7 +12,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: myhelmapp
+            name: {{ .Values.appName }}
             port:
               number: 80
 ---
@@ -29,6 +29,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: myhelmappwordpress
+            name: {{ .Values.appName }}wordpress
             port:
               number: 80
