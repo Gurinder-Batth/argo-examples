@@ -7,7 +7,7 @@ data:
   FONT_COLOR: '#FFFFFF'
   CUSTOM_HEADER: {{ .Values.configmap.data.CUSTOM_HEADER }}
   MYSQL_ROOT_PASSWORD: 'password'
-  host_cache_size : 0
+  host_cache_size : '0'
   MYSQL_DATABASE: 'database'
   MYSQL_USER: 'user'
   MYSQL_PASSWORD: 'password'
