@@ -12,7 +12,7 @@ configmap:
     CUSTOM_HEADER: 'This app was deployed with helm!'
 
 image:
-  name: drupal
+  name: gurinderpal/video-streaming
   tag: latest
 
 image_database:
