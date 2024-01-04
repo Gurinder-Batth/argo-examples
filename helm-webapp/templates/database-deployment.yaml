@@ -27,7 +27,7 @@ spec:
           - name: MARIADB_USER
             value: "username"
           - name: MARIADB_ROOT_PASSWORD
-            value: "password"
+            value: "123456"
           - name: MARIADB_DATABASE
             value: "database"
           - name: MARIADB_PASSWORD
