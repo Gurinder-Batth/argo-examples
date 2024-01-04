@@ -34,6 +34,8 @@ spec:
             value: "database"
           - name: MYSQL_ROOT_PASSWORD
             value: "root"
+          - name: HOST_CACHE_SIZE
+            value: "0"
         resources:
           requests:
             memory: "16Mi" 
