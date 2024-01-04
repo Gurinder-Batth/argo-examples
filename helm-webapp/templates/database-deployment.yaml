@@ -24,14 +24,14 @@ spec:
         env:
           - name: MYSQL_PORT
             value: "3306"
-          - name: MYSQL_USER
+          - name: MARIADB_USER
             value: "username"
-          - name: MYSQL_PASSWORD
+          - name: MARIADB_ROOT_PASSWORD
             value: "password"
-          - name: MYSQL_DATABASE
+          - name: MARIADB_DATABASE
             value: "database"
-          - name: MYSQL_ROOT_PASSWORD
-            value: "root"
+          - name: MARIADB_PASSWORD
+            value: "password"
           - name: HOST_CACHE_SIZE
             value: "0"
         resources:
