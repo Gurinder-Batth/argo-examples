@@ -16,7 +16,7 @@ image:
   tag: latest
 
 image_database:
-  name: mysql
+  name: stable/mysql
   tag: latest
 
 image_wordpress:
