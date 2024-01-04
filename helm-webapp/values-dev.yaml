@@ -6,8 +6,3 @@ replicas: 1
 configmap:
   data:
     CUSTOM_HEADER: 'This is on the DEV environment!'
-    MYSQL_ROOT_PASSWORD: 'password'
-    HOST_CACHE_SIZE : '0'
-    MYSQL_DATABASE: 'database'
-    MYSQL_USER: 'user'
-    MYSQL_PASSWORD: 'password'
