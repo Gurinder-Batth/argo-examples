@@ -25,10 +25,10 @@ spec:
   - host: myhelmapp.example.com
     http:
       paths:
-      - path: /wordpress
+      - path: /video2
         pathType: Prefix
         backend:
           service:
-            name: {{ .Values.appName }}wordpress
+            name: {{ .Values.appName }}
             port:
               number: 80

@@ -1,7 +1,7 @@
 ingress:
   enabled: true
   
-replicas: 1
+replicas: 3
 
 configmap:
   data:
